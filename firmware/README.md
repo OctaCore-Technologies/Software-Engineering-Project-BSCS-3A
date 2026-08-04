@@ -30,15 +30,6 @@ Because our 5-person team develops across different operating systems (Windows a
 
 ---
 
-## ⚠️ Strict Development Rules
-
-Hardware debugging is difficult. To maintain a stable and traceable codebase, the following rule is absolute and non-negotiable:
-
-- **RULE: NO DELETING LOGS OR COMMENTS, EVERYTHING MUST LOG ITSELF.**
-  Every state change, sensor reading, API transmission, and camera trigger must output to the serial monitor. Do not remove existing debug lines, comments, or logging statements when refactoring code.
-
----
-
 ## Flashing the Device
 
 1. Connect the ESP32-S3 to your machine via USB.

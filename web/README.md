@@ -62,4 +62,3 @@ Our API services run on a completely separate runtime and do not require Node.js
 
 - **Dependency Management:** Ensure your local `.gitignore` is active before pushing to avoid committing `node_modules`.
 - **Environment Variables:** Do not commit `.env` files; all secrets and connection strings must remain strictly local.
-- **Logging Standard:** Everything must log itself. Under no circumstances should logs or comments be deleted from generated code.

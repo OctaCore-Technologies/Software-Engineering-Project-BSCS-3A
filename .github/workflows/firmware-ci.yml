@@ -1,0 +1,39 @@
+name: Firmware CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - firmware-main
+    paths:
+      - 'firmware/Software_Engineering/**'
+
+jobs:
+  firmware-build:
+    name: Build (Firmware)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: firmware/Software_Engineering
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache PlatformIO packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.platformio
+          key: ${{ runner.os }}-platformio-${{ hashFiles('firmware/Software_Engineering/platformio.ini') }}
+          restore-keys: |
+            ${{ runner.os }}-platformio-
+
+      - name: Install PlatformIO
+        run: pip install --upgrade platformio
+
+      - name: Build firmware
+        run: pio run

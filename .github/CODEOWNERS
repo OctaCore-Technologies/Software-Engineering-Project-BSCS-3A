@@ -1,0 +1,8 @@
+# CODEOWNERS
+
+# Global rule — PM and QA must approve any PR touching anything in the repo
+*   @OctaCore-Technologies/pm @OctaCore-Technologies/qa
+
+/frontend/   @OctaCore-Technologies/pm @OctaCore-Technologies/qa @OctaCore-Technologies/frontend
+/backend/    @OctaCore-Technologies/pm @OctaCore-Technologies/qa @OctaCore-Technologies/backend
+/firmware/   @OctaCore-Technologies/pm @OctaCore-Technologies/qa @OctaCore-Technologies/firmware

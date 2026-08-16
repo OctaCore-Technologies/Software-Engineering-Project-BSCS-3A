@@ -23,3 +23,4 @@ _Details regarding the framework, database, and deployment environment will be u
 ## Repository Structure
 
 _Folder structure will be initialized once the architecture (e.g., MVC, Vertical Slice) is finalized._
+<!--test-->
